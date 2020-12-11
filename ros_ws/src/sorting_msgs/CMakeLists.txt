@@ -17,9 +17,18 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
+# Generate interfaces
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Object.msg
+  "action/SelectObject.action"
+  "action/PickObject.action"
+  "action/PlaceObject.action"
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
