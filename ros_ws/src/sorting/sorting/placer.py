@@ -1,5 +1,7 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.action import ActionServer
+from sorting_msgs.action import PlaceObject
 
 
 class Placer(Node):
@@ -8,13 +10,19 @@ class Placer(Node):
     """
 
     def __init__(self) -> None:
-        super().__init__('picker')
+        super().__init__('placer')
+        self._place_server: ActionServer = ActionServer(
+            self, PlaceObject, 'PlaceObject', self._place_cb
+        )
+
+    def _place_cb(self, goal_handle) -> PlaceObject.Result:
+        raise NotImplementedError
 
 
 def main(args=None):
     rclpy.init(args=args)
-    picker = Picker()
-    rclpy.spin(picker)
+    placer = Placer()
+    rclpy.spin(placer)
     manipulator.destroy_node()
     rclpy.shutdown()
 
