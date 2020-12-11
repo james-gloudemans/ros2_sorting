@@ -1,4 +1,0 @@
-ARG BASE_IMAGE=ros
-ARG TAG=foxy
-
-FROM ${BASE_IMAGE}:${TAG}

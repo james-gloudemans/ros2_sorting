@@ -1,4 +1,0 @@
-ARG BASE_IMAGE=gazebo
-ARG TAG=libgazebo11
-
-FROM ${BASE_IMAGE}:${TAG}
