@@ -10,3 +10,4 @@ def generate_launch_description():
             Node(package='sorting', executable='picker'),
             Node(package='sorting', executable='placer'),
         ]
+    )
