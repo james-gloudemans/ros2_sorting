@@ -19,6 +19,7 @@ endif()
 # Find ament packages and libraries for ament and system dependencies
 ################################################################################
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 find_package(gazebo_ros_pkgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
@@ -54,6 +55,13 @@ set(dependencies
 ################################################################################
 install(DIRECTORY launch models worlds
   DESTINATION share/${PROJECT_NAME}/
+)
+ament_python_install_package(scripts/)
+install(PROGRAMS
+  scripts/spawn_jackal.py
+  DESTINATION lib/jackal_gazebo
+  RENAME spawn_jackal
+  PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
 )
 
 ################################################################################
