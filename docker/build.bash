@@ -29,7 +29,7 @@ if [ "$REBUILD" -eq 1 ]; then
   ${BASE_DIR}
 else
   docker build \
-  --build-arg BASE_IMAGE=${BASE_IMAGE} \
+  --build-arg BASE_ROS_IMAGE=${BASE_ROS_IMAGE} \
   --build-arg ROS_DISTRO=${ROS_DISTRO} \
   -t ${NAME}:${ROS_DISTRO} \
   -f docker/Dockerfile \
