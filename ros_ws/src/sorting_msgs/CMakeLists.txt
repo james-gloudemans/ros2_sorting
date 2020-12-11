@@ -24,7 +24,7 @@ find_package(geometry_msgs REQUIRED)
 
 # Generate interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Object.msg
+  "msg/Object.msg"
   "action/SelectObject.action"
   "action/PickObject.action"
   "action/PlaceObject.action"
