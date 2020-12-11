@@ -1,0 +1,7 @@
+# Place a held object in the given location
+
+geometry_msgs/Point position
+---
+# no result
+---
+# no feedback
