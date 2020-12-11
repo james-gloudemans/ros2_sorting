@@ -56,6 +56,7 @@ set(dependencies
 install(DIRECTORY launch models worlds
   DESTINATION share/${PROJECT_NAME}/
 )
+# generated spawn_jackal is not a symlink :(
 ament_python_install_package(scripts/)
 install(PROGRAMS
   scripts/spawn_jackal.py
