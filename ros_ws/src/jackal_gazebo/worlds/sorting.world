@@ -72,7 +72,7 @@
     </scene>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>10.5302 1.28575 16.0439 4.3e-05 1.5698 1.64424</pose>
+        <pose>0.060658 -16.3757 19.4769 -0 0.873798 1.57224</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -227,10 +227,10 @@
       <pose>0.014638 -0.007381 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>2586 464000000</sim_time>
-      <real_time>43 837891231</real_time>
-      <wall_time>1607715479 55241264</wall_time>
-      <iterations>43745</iterations>
+      <sim_time>2623 157000000</sim_time>
+      <real_time>36 760825314</real_time>
+      <wall_time>1607725310 913316397</wall_time>
+      <iterations>36693</iterations>
       <model name='drc_practice_white_jersey_barrier'>
         <pose>-12.3049 1.7572 0 0 -0 1.34163</pose>
         <scale>1 1 1</scale>
@@ -507,8 +507,8 @@
         <link name='link'>
           <pose>0.006073 0.017052 0.06 -0 1e-06 -1.8e-05</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.140556 -0.00026 -0.28965 -3.1415 0.330664 3.13657</acceleration>
-          <wrench>0.140556 -0.00026 -0.28965 0 -0 0</wrench>
+          <acceleration>0.140556 -0.00026 -0.289656 -3.1415 0.330666 3.13657</acceleration>
+          <wrench>0.140556 -0.00026 -0.289656 0 -0 0</wrench>
         </link>
       </model>
       <model name='object1_0'>
@@ -517,25 +517,25 @@
         <link name='link'>
           <pose>1.1929 -0.118567 0.06 0 -1e-06 -4e-06</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.140556 -0.000257 -0.28965 -3.14157 -0.330664 -3.13657</acceleration>
-          <wrench>-0.140556 -0.000257 -0.28965 0 -0 0</wrench>
+          <acceleration>-0.140556 -0.000257 -0.289656 -3.14157 -0.330666 -3.13657</acceleration>
+          <wrench>-0.140556 -0.000257 -0.289656 0 -0 0</wrench>
         </link>
       </model>
       <model name='object2'>
-        <pose>-0.809471 -0.911813 0.10999 0 -0 -1e-05</pose>
+        <pose>-0.809471 -0.911813 0.109991 0 -0 -1e-05</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-0.809471 -0.911813 0.10999 0 -0 -1e-05</pose>
+          <pose>-0.809471 -0.911813 0.109991 0 -0 -1e-05</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='object2_0'>
-        <pose>-0.072115 1.24336 0.10999 0 -0 -1e-05</pose>
+        <pose>-0.072115 1.24336 0.109991 0 -0 -1e-05</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-0.072115 1.24336 0.10999 0 -0 -1e-05</pose>
+          <pose>-0.072115 1.24336 0.109991 0 -0 -1e-05</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
