@@ -17,5 +17,12 @@ setup(
     description='Scripts for autonomous sorting with mobile robot.',
     license='Apache 2.0',
     tests_require=['pytest'],
-    entry_points={'console_scripts': [],},
+    entry_points={
+        'console_scripts': [
+            'picker = sorting.sorter:main',
+            'object_selector = sorting.object_selector:main',
+            'picker = sorting.picker:main',
+            'placer = sorting.placer:main',
+        ],
+    },
 )
