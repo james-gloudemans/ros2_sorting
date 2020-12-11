@@ -32,7 +32,7 @@ ENV HOME /home/${USER}
 RUN mkdir -p ${HOME}/ros_ws/src
 WORKDIR ${HOME}/ros_ws
 RUN cd ${HOME}/ros_ws && . /opt/ros/${ROS_DISTRO}/setup.sh
-COPY ./jackal_ws/src ${HOME}/ros_ws/src
+COPY ./ros_ws/src ${HOME}/ros_ws/src
 RUN sudo apt-get update \
     && rosdep update \
     && rosdep install --from-paths src --ignore-src --rosdistro ${ROS_DISTRO} -y --skip-keys "console_bridge fastcdr fastrtps rti-connext-dds-5.3.1 urdfdom_headers" \
