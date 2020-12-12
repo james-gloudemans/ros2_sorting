@@ -89,7 +89,7 @@
     | 5   | canceled  |
     | 6   | aborted   |
     
-   Why are these not in the ros documentation? | unknown
+   Why are these not in the ros documentation? unknown
 
 ## Current run process
 from `ros2_sorting/`
