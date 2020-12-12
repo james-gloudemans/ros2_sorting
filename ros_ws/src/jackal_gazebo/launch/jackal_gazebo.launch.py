@@ -11,8 +11,8 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     package_name = 'jackal_gazebo'
-    urdf_file = os.path.join(
-        get_package_share_directory('jackal_description'), 'urdf', 'jackal.urdf'
+    sdf_file = os.path.join(
+        get_package_share_directory(package_name), 'models', 'jackal', 'model.sdf'
     )
     use_sim_time = LaunchConfiguration("use_sim_time", default="true")
     world_file_name = "sorting.world"
@@ -24,7 +24,15 @@ def generate_launch_description():
     return LaunchDescription(
         [
             ExecuteProcess(
-                cmd=["gzserver", "--verbose", world, "-s", "libgazebo_ros_factory.so"],
+                cmd=[
+                    "gzserver",
+                    "--verbose",
+                    world,
+                    "-s",
+                    "libgazebo_ros_init.so",
+                    "-s",
+                    "libgazebo_ros_factory.so",
+                ],
                 output="screen",
             ),
             ExecuteProcess(
@@ -37,9 +45,7 @@ def generate_launch_description():
                 ),
                 launch_arguments={"use_sim_time": use_sim_time}.items(),
             ),
-            ExecuteProcess(
-                cmd=['ros2', 'run', package_name, 'spawn_jackal', urdf_file]
-            ),
+            ExecuteProcess(cmd=['ros2', 'run', package_name, 'spawn_jackal', sdf_file]),
         ]
     )
 
