@@ -53,7 +53,6 @@ class Sorter(Node):
         ).get_parameter_value().string_value
 
     async def sort(self) -> None:
-        self.get_logger().info(f'{self.bt}')
         await asyncio.sleep(10)
         self.get_logger().info('Sorting complete.')
         self._nav_client.destroy()
