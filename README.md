@@ -2,6 +2,8 @@
 
 ## Autonomously sort objects with a Clearpath Robotics Jackal in ROS2
 
+- [ ] Make issues for unchecked boxes
+
 - [x] Create Gazebo world for testing
   - Why is the lighting different every time Gazebo is launched?
 - [x] Jackal sdf for Gazebo
@@ -56,7 +58,7 @@
       - Should only launch desired nodes, but enough for a complete navigation stack
     - [x] Replace FollowWaypoints action with navigate_to_pose
       - Requires a behavior tree, which can be found in `/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/`
-    - [ ] Use a parameter to load the behavior tree.
+    - [x] Use a parameter to load the behavior tree.
       - Reading: [1](https://design.ros2.org/articles/ros_parameters.html), [2](https://index.ros.org/doc/ros2/Tutorials/Using-Parameters-In-A-Class-Python/)
     - [x] Make all clients wait for servers in their node's `__init__` method and replace all `wait_for_service` and `wait_for_server` with `service_is_ready` and `server_is_ready` checks.
     - [ ] Simulate "enemies" which have a required standoff distance
