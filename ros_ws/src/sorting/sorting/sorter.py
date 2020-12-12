@@ -47,8 +47,10 @@ class Sorter(Node):
             "aborted",
         )  # There should be some way to translate goal status codes to english in rclpy
 
-        # TODO: make this a ROS parameter
-        self.bt: str = '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml'
+        self.declare_parameter('behavior_tree')
+        self.bt: str = self.get_parameter(
+            'behavior_tree'
+        ).get_parameter_value().string_value
 
     async def sort(self) -> None:
         await asyncio.sleep(10)
